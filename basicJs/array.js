@@ -42,4 +42,12 @@ console.log(arrayInsideArray.flat(4)); // Flattens the array to a specified dept
 //flat method is used to flatten nested arrays into a single array
 
 console.log(Array.isArray('Aamir')); // check if tha given value is an array or not if given value is not array then it return false
-console.log
+console.log(Array.from("Mohammad")); //from methd is used to convert string object into an array
+console.log(Array.of(1,2,3,4,5)); //of method is used to create an array from the given arguments
+
+
+const n1= 1;
+const n2 = 2;
+const n3 = 3;
+
+console.log(Array.of(n1, n2, n3)); // of method is used to create an array from the given arguments and it can convert variables into array
