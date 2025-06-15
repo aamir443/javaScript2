@@ -15,3 +15,19 @@ function calculateCartPrice(val1, val2, ...price){
 console.log(calculateCartPrice(100, 200, 300, 400, 500));
 
 // 100 will be val1 and 200 will be val2 rest will be strored in price array
+
+
+// object pass in a functions
+
+const user = {
+    name: 'aamir',
+    age: 22
+}
+
+function handaleObject(printObject){
+    console.log(printObject.name);
+    console.log(printObject.age);
+}
+handaleObject(user);
+// we can also pass object as a parameter in a function
+// we can decalare the object in the function argument
