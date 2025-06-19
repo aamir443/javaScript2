@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+            margin: 0;
+            height: 100vh;
+        }
+        .container {
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            gap: 10px;
+
+        }
+        .button {
+            padding: 20px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #blue {
+            background-color: blue;
+            color: white;
+        }
+        #red {
+            background-color: red;
+            color: white;
+        }
+        #green {
+            background-color: green;
+            color: white;
+        }
+        #yellow {
+            background-color: yellow;
+            color: black;
+        }
+        #purple {
+            background-color: purple;
+            color: white;
+        }
+        #blue:hover{
+            background-color: darkblue;
+        }
+        #red:hover{
+            background-color: darkred;
+        }
+        #green:hover{
+            background-color: darkgreen;
+        }
+        #yellow:hover{
+            background-color: orange;
+        }
+        #purple:hover{
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button" id="blue">blue</button>
+        <button class="button" id="red">red</button>
+        <button class="button" id="green">green</button>
+        <button class="button" id="yellow">yellow</button>
+        <button class="button" id="purple">purple</button>
+    </div>
+</body>
+<script>
+    // const buttons = document.querySelectorAll('.button');
+    // const body = document.querySelector('body');
+    // buttons.forEach( (button)=> {
+    //     button.addEventListener('click', (e)  =>{
+    //         if(e.target.id === 'blue'){
+    //             body.style.backgroundColor = 'blue';
+    //         }
+    //                    else if(e.target.id === 'red'){
+    //             body.style.backgroundColor = 'red';
+    //         }
+    //                  else if(e.target.id === 'green'){
+    //             body.style.backgroundColor = 'green';
+    //         }
+    //                     if(e.target.id === 'yellow'){
+    //             body.style.backgroundColor = 'yellow';
+    //         }
+    //                    else if(e.target.id === 'purple'){
+    //             body.style.backgroundColor = 'purple';
+    //         }
+    //     })
+    // })
+
+    const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+
+const colorMap = {
+    blue: 'blue',
+    red: 'red',
+    green: 'green',
+    yellow: 'yellow',
+    purple: 'purple'
+};
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const color = colorMap[e.target.id];
+        if (color) {
+            body.style.backgroundColor = color;
+        }
+    });
+});
+// This code adds event listeners to each button. When a button is clicked, it changes the background color of the body to the corresponding color defined in the `colorMap` object. This approach is more scalable and easier to maintain if you want to add more colors in the future.
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 id="firstHeading">Hello</h1>
+    <h1 id="secondHeading" style="display:none;">Aamir</h1>
+    <button id="changeTextButton">Change Text</button>
+    <button id="stopButton">Stop</button>
+    
+</body>
+<script>
+        let timerId;
+
+        document.getElementById('firstHeading').style.display = 'block';
+        document.getElementById('secondHeading').style.display = 'none';
+
+        document.getElementById('changeTextButton').addEventListener('click', function() {
+            if (timerId) return;
+            timerId = setTimeout(() => {
+                document.getElementById('firstHeading').style.display = 'none';
+                document.getElementById('secondHeading').style.display = 'block';
+                timerId = null;
+            }, 10000); 
+        });
+
+        document.getElementById('stopButton').addEventListener('click', function() {
+            if (timerId) {
+                clearTimeout(timerId);
+                timerId = null;
+            }
+        });
+    </script>
+</html>
